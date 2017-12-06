@@ -1,0 +1,140 @@
+// LinkParser.idl : IDL source for LinkParser.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (LinkParser.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(7863615D-6455-11D2-B8DB-00002441B3CB),
+		dual,
+		helpstring("IParser Interface"),
+		pointer_default(unique)
+	]
+	interface IParser : IDispatch
+	{
+		[id(1), helpstring("method DictionaryCreate")] HRESULT DictionaryCreate([out, retval] VARIANT_BOOL *pRetVal);
+		[id(2), helpstring("method DictionaryDelete")] HRESULT DictionaryDelete();
+		[id(3), helpstring("method DictionaryGetMaxCost")] HRESULT DictionaryGetMaxCost([out, retval] int *pRetVal);
+		[id(4), helpstring("method ParseOptionsCreate")] HRESULT ParseOptionsCreate([out, retval] VARIANT_BOOL *pRetVal);
+		[id(5), helpstring("method ParseOptionsDelete")] HRESULT ParseOptionsDelete();
+		[propget, id(6), helpstring("property Verbosity")] HRESULT Verbosity([out, retval] int *pVal);
+		[propput, id(6), helpstring("property Verbosity")] HRESULT Verbosity([in] int newVal);
+		[propget, id(7), helpstring("property LinkageLimit")] HRESULT LinkageLimit([out, retval] int *pVal);
+		[propput, id(7), helpstring("property LinkageLimit")] HRESULT LinkageLimit([in] int newVal);
+		[propget, id(8), helpstring("property MinNullCount")] HRESULT MinNullCount([out, retval] int *pVal);
+		[propput, id(8), helpstring("property MinNullCount")] HRESULT MinNullCount([in] int newVal);
+		[propget, id(9), helpstring("property MaxNullCount")] HRESULT MaxNullCount([out, retval] int *pVal);
+		[propput, id(9), helpstring("property MaxNullCount")] HRESULT MaxNullCount([in] int newVal);
+		[propget, id(10), helpstring("property NullBlock")] HRESULT NullBlock([out, retval] int *pVal);
+		[propput, id(10), helpstring("property NullBlock")] HRESULT NullBlock([in] int newVal);
+		[propget, id(11), helpstring("property IslandsOK")] HRESULT IslandsOK([out, retval] short *pVal);
+		[propput, id(11), helpstring("property IslandsOK")] HRESULT IslandsOK([in] short newVal);
+		[propget, id(12), helpstring("property ShortLength")] HRESULT ShortLength([out, retval] int *pVal);
+		[propput, id(12), helpstring("property ShortLength")] HRESULT ShortLength([in] int newVal);
+		[propget, id(13), helpstring("property AllShort")] HRESULT AllShort([out, retval] short *pVal);
+		[propput, id(13), helpstring("property AllShort")] HRESULT AllShort([in] short newVal);
+		[propget, id(14), helpstring("property DisplayWalls")] HRESULT DisplayWalls([out, retval] short *pVal);
+		[propput, id(14), helpstring("property DisplayWalls")] HRESULT DisplayWalls([in] short newVal);
+		[propget, id(15), helpstring("property DisplayUnion")] HRESULT DisplayUnion([out, retval] short *pVal);
+		[propput, id(15), helpstring("property DisplayUnion")] HRESULT DisplayUnion([in] short newVal);
+		[propget, id(16), helpstring("property AllowNull")] HRESULT AllowNull([out, retval] short *pVal);
+		[propput, id(16), helpstring("property AllowNull")] HRESULT AllowNull([in] short newVal);
+		[propget, id(17), helpstring("property EchoOn")] HRESULT EchoOn([out, retval] short *pVal);
+		[propput, id(17), helpstring("property EchoOn")] HRESULT EchoOn([in] short newVal);
+		[propget, id(18), helpstring("property BatchMode")] HRESULT BatchMode([out, retval] short *pVal);
+		[propput, id(18), helpstring("property BatchMode")] HRESULT BatchMode([in] short newVal);
+		[propget, id(19), helpstring("property PanicMode")] HRESULT PanicMode([out, retval] short *pVal);
+		[propput, id(19), helpstring("property PanicMode")] HRESULT PanicMode([in] short newVal);
+		[propget, id(20), helpstring("property ScreenWidth")] HRESULT ScreenWidth([out, retval] int *pVal);
+		[propput, id(20), helpstring("property ScreenWidth")] HRESULT ScreenWidth([in] int newVal);
+		[propget, id(21), helpstring("property DisplayOn")] HRESULT DisplayOn([out, retval] short *pVal);
+		[propput, id(21), helpstring("property DisplayOn")] HRESULT DisplayOn([in] short newVal);
+		[propget, id(22), helpstring("property DisplayPostscript")] HRESULT DisplayPostscript([out, retval] short *pVal);
+		[propput, id(22), helpstring("property DisplayPostscript")] HRESULT DisplayPostscript([in] short newVal);
+		[propget, id(23), helpstring("property DisplayBad")] HRESULT DisplayBad([out, retval] short *pVal);
+		[propput, id(23), helpstring("property DisplayBad")] HRESULT DisplayBad([in] short newVal);
+		[propget, id(24), helpstring("property DisplayLinks")] HRESULT DisplayLinks([out, retval] short *pVal);
+		[propput, id(24), helpstring("property DisplayLinks")] HRESULT DisplayLinks([in] short newVal);
+		[propget, id(25), helpstring("property DisjunctCost")] HRESULT DisjunctCost([out, retval] int *pVal);
+		[propput, id(25), helpstring("property DisjunctCost")] HRESULT DisjunctCost([in] int newVal);
+		[propget, id(26), helpstring("property MaxParseTime")] HRESULT MaxParseTime([out, retval] int *pVal);
+		[propput, id(26), helpstring("property MaxParseTime")] HRESULT MaxParseTime([in] int newVal);
+		[propget, id(27), helpstring("property MaxMemory")] HRESULT MaxMemory([out, retval] int *pVal);
+		[propput, id(27), helpstring("property MaxMemory")] HRESULT MaxMemory([in] int newVal);
+		[propget, id(28), helpstring("property TimerExpired")] HRESULT TimerExpired([out, retval] short *pVal);
+		[propget, id(29), helpstring("property MemoryExhausted")] HRESULT MemoryExhausted([out, retval] short *pVal);
+		[propget, id(30), helpstring("property ResourcesExhausted")] HRESULT ResourcesExhausted([out, retval] short *pVal);
+		[id(31), helpstring("method SentenceCreate")] HRESULT SentenceCreate([in] BSTR Sentence, [out, retval] VARIANT_BOOL *pRetVal);
+		[id(32), helpstring("method SentenceDelete")] HRESULT SentenceDelete();
+		[id(33), helpstring("method SentenceParse")] HRESULT SentenceParse([out, retval] int *pRetVal);
+		[propget, id(34), helpstring("property Dictionary")] HRESULT Dictionary([out, retval] VARIANT_BOOL *pVal);
+		[propget, id(35), helpstring("property Sentence")] HRESULT Sentence([out, retval] VARIANT_BOOL *pVal);
+		[propget, id(36), helpstring("property ParseOptions")] HRESULT ParseOptions([out, retval] VARIANT_BOOL *pVal);
+		[propget, id(37), helpstring("property Linkage")] HRESULT Linkage([out, retval] VARIANT_BOOL *pVal);
+		[propget, id(38), helpstring("property PostProcessor")] HRESULT PostProcessor([out, retval] VARIANT_BOOL *pVal);
+		[id(39), helpstring("method SentenceLength")] HRESULT SentenceLength([out, retval] int *pRetVal);
+		[id(40), helpstring("method SentenceGetWord")] HRESULT SentenceGetWord([in] int Index, [out, retval] BSTR *pRetVal);
+		[id(41), helpstring("method SentenceNullCount")] HRESULT SentenceNullCount([out, retval] int *pRetVal);
+		[id(42), helpstring("method SentenceNumLinkagesFound")] HRESULT SentenceNumLinkagesFound([out, retval] int *pRetVal);
+		[id(43), helpstring("method SentenceNumValidLinkages")] HRESULT SentenceNumValidLinkages([out, retval] int *pRetVal);
+		[id(44), helpstring("method SentenceNumLinkagesPostProcessed")] HRESULT SentenceNumLinkagesPostProcessed([out, retval] int *pRetVal);
+		[id(45), helpstring("method SentenceNumViolations")] HRESULT SentenceNumViolations([in] int Index, [out, retval] int *pRetVal);
+		[id(46), helpstring("method SentenceDisjunctCost")] HRESULT SentenceDisjunctCost([in] int Index, [out, retval] int *pRetVal);
+		[id(47), helpstring("method LinkageCreate")] HRESULT LinkageCreate([in] int Index, [out, retval] VARIANT_BOOL *pRetVal);
+		[id(48), helpstring("method LinkageGetNumSublinkages")] HRESULT LinkageGetNumSublinkages([out, retval] int *pRetVal);
+		[id(49), helpstring("method LinkageSetCurrentSublinkage")] HRESULT LinkageSetCurrentSublinkage([in] int Index, [out, retval] short *pRetVal);
+		[id(50), helpstring("method LinkageComputeUnion")] HRESULT LinkageComputeUnion([out, retval] short *pRetVal);
+		[id(51), helpstring("method LinkageGetNumWords")] HRESULT LinkageGetNumWords([out, retval] int *pRetVal);
+		[id(52), helpstring("method LinkageGetNumLinks")] HRESULT LinkageGetNumLinks([out, retval] int *pRetVal);
+		[id(53), helpstring("method LinkageGetLinkLength")] HRESULT LinkageGetLinkLength([in] int Index, [out, retval] int *pRetVal);
+		[id(54), helpstring("method LinkageGetLinkLWord")] HRESULT LinkageGetLinkLWord([in] int Index, [out, retval] int *pRetVal);
+		[id(55), helpstring("method LinkageGetLinkRWord")] HRESULT LinkageGetLinkRWord([in] int Index, [out, retval] int *pRetVal);
+		[id(56), helpstring("method LinkagePrintDiagram")] HRESULT LinkagePrintDiagram([out, retval] BSTR *pRetVal);
+		[id(57), helpstring("method LinkagePrintPostscript")] HRESULT LinkagePrintPostscript([in] int Mode, [out, retval] BSTR *pRetVal);
+		[id(58), helpstring("method LinkagePrintLinksAndDomains")] HRESULT LinkagePrintLinksAndDomains([out, retval] BSTR *pRetVal);
+		[id(59), helpstring("method LinkageGetLinkLabel")] HRESULT LinkageGetLinkLabel([in] int Index, [out, retval] BSTR *pRetVal);
+		[id(60), helpstring("method LinkageGetLinkLLabel")] HRESULT LinkageGetLinkLLabel([in] int Index, [out, retval] BSTR *pRetVal);
+		[id(61), helpstring("method LinkageGetLinkRLabel")] HRESULT LinkageGetLinkRLabel([in] int Index, [out, retval] BSTR *pRetVal);
+		[id(62), helpstring("method LinkageGetLinkNumDomains")] HRESULT LinkageGetLinkNumDomains([in] int Index, [out, retval] int *pRetVal);
+        [id(63), helpstring("method LinkageGetLinkDomainNames")] HRESULT LinkageGetLinkDomainNames([in] int Index, [in] BSTR Delimiter, [out, retval] BSTR *pRetVal);
+		[id(64), helpstring("method LinkageGetViolationName")] HRESULT LinkageGetViolationName([out, retval] BSTR *pRetVal);
+        [id(65), helpstring("method LinkageGetWords")] HRESULT LinkageGetWords([in] BSTR Delimiter, [out, retval] BSTR *pRetVal);
+		[id(66), helpstring("method LinkageGetWord")] HRESULT LinkageGetWord([in] int Index, [out, retval] BSTR *pRetVal);
+		[id(67), helpstring("method LinkageUnusedWordCost")] HRESULT LinkageUnusedWordCost([out, retval] int *pRetVal);
+		[id(68), helpstring("method LinkageDisjunctCost")] HRESULT LinkageDisjunctCost([out, retval] int *pRetVal);
+		[id(69), helpstring("method LinkageAndCost")] HRESULT LinkageAndCost([out, retval] int *pRetVal);
+		[id(70), helpstring("method LinkageLinkCost")] HRESULT LinkageLinkCost([out, retval] int *pRetVal);
+		[id(71), helpstring("method LinkageDelete")] HRESULT LinkageDelete();
+		[id(72), helpstring("method PostProcessOpen")] HRESULT PostProcessOpen([in] BSTR PostProcessor, [out, retval] VARIANT_BOOL *pRetVal);
+		[id(73), helpstring("method PostProcessClose")] HRESULT PostProcessClose();
+		[id(74), helpstring("method LinkagePostProcess")] HRESULT LinkagePostProcess([out, retval] short *pRetVal);
+		[id(75), helpstring("method ResetResources")] HRESULT ResetResources();
+		[propget, id(76), helpstring("property CostModelType")] HRESULT CostModelType([out, retval] long *pVal);
+		[propput, id(76), helpstring("property CostModelType")] HRESULT CostModelType([in] long newVal);
+		[propget, id(77), helpstring("property LinkageIsCanonical")] HRESULT LinkageIsCanonical([out, retval] short *pVal);
+		[propget, id(78), helpstring("property LinkageIsImproper")] HRESULT LinkageIsImproper([out, retval] short *pVal);
+		[propget, id(79), helpstring("property LinkageHasInconsistentDomains")] HRESULT LinkageHasInconsistentDomains([out, retval] short *pVal);
+	};
+[
+	uuid(78636151-6455-11D2-B8DB-00002441B3CB),
+	version(1.0),
+	helpstring("LinkParser 1.0 API Type Library")
+]
+library LINKPARSERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(78636160-6455-11D2-B8DB-00002441B3CB),
+		helpstring("Parser Class for LinkParser API")
+	]
+	coclass Parser
+	{
+		[default] interface IParser;
+	};
+
+};

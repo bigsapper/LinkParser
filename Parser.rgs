@@ -1,0 +1,26 @@
+HKCR
+{
+	LinkParser.Parser.1 = s 'Parser Class'
+	{
+		CLSID = s '{78636160-6455-11D2-B8DB-00002441B3CB}'
+	}
+	LinkParser.Parser = s 'Parser Class'
+	{
+		CLSID = s '{78636160-6455-11D2-B8DB-00002441B3CB}'
+		CurVer = s 'LinkParser.Parser.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {78636160-6455-11D2-B8DB-00002441B3CB} = s 'Parser Class'
+		{
+			ProgID = s 'LinkParser.Parser.1'
+			VersionIndependentProgID = s 'LinkParser.Parser'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{78636151-6455-11D2-B8DB-00002441B3CB}'
+		}
+	}
+}
